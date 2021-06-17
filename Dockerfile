@@ -47,7 +47,6 @@ COPY --from=compiler /root/chia-plotter/build /usr/lib/chia-plotter
 RUN ln -s /usr/lib/chia-plotter/chia_plot /usr/bin/chia_plot
 
 WORKDIR /usr/lib/chia-plotter
-ADD ./entrypoint.sh entrypoint.sh 
 ADD ./plotfree.sh plotfree.sh 
 
 ENTRYPOINT ["bash", "./plotfree.sh"]
